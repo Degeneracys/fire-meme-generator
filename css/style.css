@@ -4,7 +4,16 @@
 
 @font-face {
     font-family: 'Dracutaz';
-    src: url('../Dracutaz.ttf');
+    src: url('../Dracutaz.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Add fallback font for better text rendering */
+@font-face {
+    font-family: 'Dracutaz-Fallback';
+    src: local('Arial'), local('Helvetica'), local('sans-serif');
     font-weight: normal;
     font-style: normal;
 }
@@ -1802,6 +1811,6 @@ button {
 }
 
 .Hard-font {
-    font-family: 'Dracutaz', serif;
+    font-family: 'Dracutaz', 'Dracutaz-Fallback', 'Arial', 'Helvetica', sans-serif;
     font-size: 160px;
 }
